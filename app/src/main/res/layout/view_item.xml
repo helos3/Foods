@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:contentDescription="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pic"
+        android:src="@drawable/abc_btn_rating_star_off_mtrl_alpha"/>
+    <!-- todo сделать через drawable, убрать хардкод, сдеалать контент дескрипшен, добавить кард вью-->
+    <TextView
+        android:text="hahaha"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

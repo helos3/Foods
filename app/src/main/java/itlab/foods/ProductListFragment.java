@@ -22,10 +22,11 @@ public class ProductListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView rv = (RecyclerView)getView().findViewById(R.id.cv);
-        rv.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), SPAN_COUNT));
+        View rootView = inflater.inflate(R.layout.list_fragment, container, false);
+        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv);
+        rv.setLayoutManager(new GridLayoutManager(getActivity(), SPAN_COUNT));
         RvAdapter adapter = new RvAdapter(new Products().products);
         rv.setAdapter(adapter);
-        return inflater.inflate(R.layout.list_fragment, container, false);
+        return rootView;
     }
 }

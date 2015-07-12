@@ -20,9 +20,8 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ProductViewHolder>
 
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_fragment, parent, false);
-        ProductViewHolder pvh = new ProductViewHolder(v);
-        return pvh;
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_item, parent, false);
+        return new ProductViewHolder(v);
     }
 
     @Override
@@ -36,13 +35,13 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ProductViewHolder>
     }
 
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
-        CardView cardView;
+        //CardView cardView;
         ImageView imageView;
         TextView textView;
 
         ProductViewHolder(View itemView) {
             super(itemView);
-            cardView = (CardView)itemView.findViewById(R.id.cv);
+            //cardView = (CardView)itemView.findViewById(R.id.cv);
             imageView = (ImageView)itemView.findViewById(R.id.pic);
             textView = (TextView)itemView.findViewById(R.id.text);
         }
