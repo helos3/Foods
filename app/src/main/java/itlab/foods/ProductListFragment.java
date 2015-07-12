@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 
 /**
  * A placeholder fragment containing a simple view.
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 public class ProductListFragment extends Fragment {
 
     int SPAN_COUNT = 3; //кол-во столбцов
+    List<Product> products = new Products().products;
 
     public ProductListFragment() {
     }
@@ -25,8 +28,10 @@ public class ProductListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_fragment, container, false);
         RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv);
         rv.setLayoutManager(new GridLayoutManager(getActivity(), SPAN_COUNT));
-        RvAdapter adapter = new RvAdapter(new Products().products);
+        RvAdapter adapter = new RvAdapter(products);
         rv.setAdapter(adapter);
+        products.add(new Product("", ""));
+        adapter.notifyDataSetChanged();
         return rootView;
     }
 }
