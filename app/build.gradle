@@ -25,8 +25,8 @@ android {
 }
 
 retrolambda {
-    jdk "/usr/local/java/jdk1.8.0_45"
-    oldJdk "/usr/local/java/jdk1.7.0_79"
+    jdk "C:\\Program Files\\Java\\jdk1.8.0_45"
+    oldJdk "C:\\Program Files\\Java\\jdk1.7.0_79"
     javaVersion JavaVersion.VERSION_1_7
 }
 

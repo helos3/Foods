@@ -44,8 +44,22 @@ class Products {
 
     private void initializeData() {
         products = new ArrayList<>();
-        products.add(new Product("Баклажан", "Молоко"));
-        products.add(new Product("Макароны", "Помидоры"));
-        products.add(new Product("Грибы", "Спайсы"));
+        products.add(new Product("qwe", "qwe"));
+        products.add(new Product("asd", "asd"));
+        products.add(new Product("zxc", "zxc"));
+        products.add(new Product("qwe", "qwe"));
+        products.add(new Product("asd", "asd"));
+        products.add(new Product("zxc", "zxc"));
+        products.add(new Product("qwe", "qwe"));
+        products.add(new Product("asd", "asd"));
+        products.add(new Product("zxc", "zxc"));
+        products.add(new Product("qwe", "qwe"));
+        products.add(new Product("asd", "asd"));
+        products.add(new Product("zxc", "zxc"));
     }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
 }
