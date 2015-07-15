@@ -1,8 +1,5 @@
 package itlab.foods;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Product {
 
     private String name;
@@ -35,31 +32,3 @@ public class Product {
     }
 }
 
-class Products {
-    public List<Product> products;
-
-    Products() {
-        initializeData();
-    }
-
-    private void initializeData() {
-        products = new ArrayList<>();
-        products.add(new Product("qwe", "qwe"));
-        products.add(new Product("asd", "asd"));
-        products.add(new Product("zxc", "zxc"));
-        products.add(new Product("qwe", "qwe"));
-        products.add(new Product("asd", "asd"));
-        products.add(new Product("zxc", "zxc"));
-        products.add(new Product("qwe", "qwe"));
-        products.add(new Product("asd", "asd"));
-        products.add(new Product("zxc", "zxc"));
-        products.add(new Product("qwe", "qwe"));
-        products.add(new Product("asd", "asd"));
-        products.add(new Product("zxc", "zxc"));
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-}

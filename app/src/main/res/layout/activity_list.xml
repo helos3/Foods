@@ -11,17 +11,37 @@
 
     <fragment
         android:id="@+id/defListFragment"
-        android:name="itlab.foods.ProductListFragment" tools:layout="@layout/list_fragment"
+        android:tag="@string/defListFragment"
+        android:name="itlab.foods.createList.ProductListFragment"
+        tools:layout="@layout/list_fragment"
         android:layout_width="match_parent" android:layout_height="match_parent"
-        android:layout_weight="30"
+        android:layout_weight="20"
         />
 
-    <fragment
-        android:id="@+id/custListFragment"
-        android:name="itlab.foods.ProductListFragment" tools:layout="@layout/list_fragment"
-        android:layout_width="match_parent" android:layout_height="match_parent"
-        android:layout_weight="70"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:weightSum="100">
+
+        <fragment
+            android:id="@+id/custListFragment"
+            android:name="itlab.foods.createList.ProductListFragment"
+            android:tag="@string/custListFragment"
+            tools:layout="@layout/list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
         />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:id="@+id/acceptListButton"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
